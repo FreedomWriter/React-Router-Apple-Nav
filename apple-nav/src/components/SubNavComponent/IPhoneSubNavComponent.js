@@ -16,10 +16,10 @@ const Justify = styled.div`
   color: hotpink;
 `;
 
-export default function MacSubNavComponents() {
+export default function IPhoneSubNavComponents(props) {
   return (
     <Justify>
-      {AppleIcons.mac.map(item => (
+      {AppleIcons.iphone.map(item => (
         <div>
           <img src={item.url} alt={item.name} />
         </div>

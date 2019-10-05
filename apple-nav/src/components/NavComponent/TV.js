@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function TV() {
   return (
     <div>
-      <Link to="/">TV</Link>
+      <Link to="/tvsubnav">TV</Link>
     </div>
   );
 }

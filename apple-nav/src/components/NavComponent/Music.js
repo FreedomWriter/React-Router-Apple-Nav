@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Music() {
   return (
     <div>
-      <Link to="/">Music</Link>
+      <Link to="/musicsubnav">Music</Link>
     </div>
   );
 }

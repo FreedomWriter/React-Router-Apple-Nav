@@ -1,5 +1,4 @@
 import React from "react";
-// import { Nav } from "reactstrap";
 import Mac from "../NavComponent/Mac";
 import IPad from "../NavComponent/iPad";
 import IPhone from "../NavComponent/iPhone";
@@ -11,6 +10,14 @@ import Logo from "../NavComponent/Logo";
 import Search from "../NavComponent/Search";
 import ShoppingBag from "../NavComponent/ShoppingBag";
 import MacSubNavComponents from "../SubNavComponent/MacSubNavComponent";
+import IPadSubNavComponents from "../SubNavComponent/IPadSubNavComponent";
+import IPhoneSubNavComponents from "../SubNavComponent/IPhoneSubNavComponent";
+import MusicSubNavComponents from "../SubNavComponent/MusicSubNavComponent";
+// import SearchSubNavComponents from "../SubNavComponent/SearchSubNavComponent";
+// import ShoppingBagSubNavComponents from "../SubNavComponent/ShoppingBagSubNavComponent";
+// import SupportSubNavComponents from "../SubNavComponent/SupportSubNavComponent";
+import TVSubNavComponents from "../SubNavComponent/TVSubNavComponent";
+import WatchSubNavComponents from "../SubNavComponent/WatchSubNavComponent";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
 
@@ -39,15 +46,15 @@ export default function NavBar(props) {
             return (
               <Justify>
                 <Logo />
-                <Mac />
-                <IPad />
-                <IPhone />
-                <Watch />
-                <TV />
-                <Music />
-                <Support />
-                <Search />
-                <ShoppingBag />
+                <Route path="/" render={props => <Mac {...props} />} />
+                <Route path="/" render={props => <IPad {...props} />} />
+                <Route path="/" render={props => <IPhone {...props} />} />
+                <Route path="/" render={props => <Watch {...props} />} />
+                <Route path="/" render={props => <TV {...props} />} />
+                <Route path="/" render={props => <Music {...props} />} />
+                <Route path="/" render={props => <Support {...props} />} />
+                <Route path="/" render={props => <Search {...props} />} />
+                <Route path="/" render={props => <ShoppingBag {...props} />} />
               </Justify>
             );
           }}
@@ -76,6 +83,31 @@ export default function NavBar(props) {
         exact
         path="/macsubnav"
         render={props => <MacSubNavComponents {...props} />}
+      />
+      <Route
+        exact
+        path="/ipadsubnav"
+        render={props => <MacSubNavComponents {...props} />}
+      />
+      <Route
+        exact
+        path="/iphonesubnav"
+        render={props => <IPhoneSubNavComponents {...props} />}
+      />
+      <Route
+        exact
+        path="/watchsubnav"
+        render={props => <WatchSubNavComponents {...props} />}
+      />
+      <Route
+        exact
+        path="/tvsubnav"
+        render={props => <TVSubNavComponents {...props} />}
+      />
+      <Route
+        exact
+        path="/musicsubnav"
+        render={props => <MusicSubNavComponents {...props} />}
       />
     </div>
   );

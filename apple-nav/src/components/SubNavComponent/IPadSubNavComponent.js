@@ -11,15 +11,16 @@ const Justify = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 3rem;
-//   background: whi;
+  // background: black;
   padding: 0 5%;
   color: hotpink;
 `;
 
-export default function MacSubNavComponents() {
+export default function IPadSubNavComponents() {
+  console.log(AppleIcons.ipad.url);
   return (
     <Justify>
-      {AppleIcons.mac.map(item => (
+      {AppleIcons.ipad.map(item => (
         <div>
           <img src={item.url} alt={item.name} />
         </div>

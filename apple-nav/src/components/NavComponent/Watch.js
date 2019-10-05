@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Watch() {
   return (
     <div>
-      <Link to="/">Watch</Link>
+      <Link to="/watchsubnav">Watch</Link>
     </div>
   );
 }

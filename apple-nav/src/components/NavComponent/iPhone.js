@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function IPhone() {
   return (
     <div>
-      <Link to="/">iPhone</Link>
+      <Link to="/iphonesubnav">iPhone</Link>
     </div>
   );
 }
