@@ -92,12 +92,12 @@ export default {
       url:
         "https://www.apple.com/v/ipad/home/au/images/chapternav/ipad_comp_light__f80dzq6i8sq6_large.svg"
     },
-    {
-      id: "16",
-      name: "Apple Pencil",
-      url:
-        "https://www.apple.com/v/ipad/home/au/images/chapternav/apple_pencil_light__e9zorbynwqie_large.svg"
-    },
+    // {
+    //   id: "16",
+    //   name: "Apple Pencil",
+    //   url:
+    //     "https://www.apple.com/v/ipad/home/au/images/chapternav/apple_pencil_light__e9zorbynwqie_large.svg"
+    // },
     {
       id: "17",
       name: "Smart Keyboard",

@@ -87,7 +87,7 @@ export default function NavBar(props) {
       <Route
         exact
         path="/ipadsubnav"
-        render={props => <MacSubNavComponents {...props} />}
+        render={props => <IPadSubNavComponents {...props} />}
       />
       <Route
         exact

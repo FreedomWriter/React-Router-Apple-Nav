@@ -4,16 +4,25 @@ import styled from "styled-components";
 
 const Justify = styled.div`
   width: 100%;
-  height: 150px
+  max-height: 600px
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   font-size: 3rem;
-  background: black;
+  // background: black;
   padding: 0 5%;
-  color: hotpink;
+  color: black;
+`;
+
+const ImgSize = styled.div`
+  margin-top: 10%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: flex-top;
+  align-self: center;
 `;
 
 export default function IPadSubNavComponents() {
@@ -22,7 +31,10 @@ export default function IPadSubNavComponents() {
     <Justify>
       {AppleIcons.ipad.map(item => (
         <div>
-          <img src={item.url} alt={item.name} />
+          <ImgSize>
+            <img src={item.url} alt={item.name} />
+          </ImgSize>
+          <p>{item.name}</p>
         </div>
       ))}
     </Justify>
