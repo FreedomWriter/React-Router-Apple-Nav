@@ -11,7 +11,7 @@ const Justify = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 3rem;
-  // background: black;
+  background: black;
   padding: 0 5%;
   color: hotpink;
 `;
