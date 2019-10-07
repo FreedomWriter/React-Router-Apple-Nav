@@ -9,17 +9,18 @@ const Justify = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
-  font-size: 3rem;
+  align-items: flex-end;
+  font-size: 1rem;
   // background: black;
   padding: 0 5%;
   color: black;
+  overflow: auto;
 `;
 
 const ImgSize = styled.div`
-  margin-top: 10%;
-  height: 100px;
-  width: 100px;
+  margin: 10% auto;
+  height: 125px;
+  width: 125px;
   display: flex;
   justify-content: flex-top;
   align-self: center;

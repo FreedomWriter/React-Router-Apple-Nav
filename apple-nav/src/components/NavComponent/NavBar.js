@@ -29,7 +29,7 @@ const Justify = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 3rem;
+  font-size: 1.6rem;
   background: black;
   padding: 0 5%;
   color: hotpink;
