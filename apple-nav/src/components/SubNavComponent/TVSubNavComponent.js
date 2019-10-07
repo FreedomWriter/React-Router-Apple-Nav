@@ -24,7 +24,7 @@ const ImgSize = styled.div`
   justify-content: center;
 `;
 
-export default function TVSubNavComponents(props) {
+export default function TVSubNavComponents() {
   return (
     <Justify>
       {AppleIcons.tv.map(item => (

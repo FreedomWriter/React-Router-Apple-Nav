@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 export default function Support() {
   return (
     <div>
-      <Link to="/">Support</Link>
+      <Link to="/" style={{ color: "#FFF" }}>
+        Support
+      </Link>
     </div>
   );
 }

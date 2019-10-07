@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 export default function TV() {
   return (
     <div>
-      <Link to="/tvsubnav">TV</Link>
+      <Link to="/tvsubnav" style={{ color: "#FFF" }}>
+        TV
+      </Link>
     </div>
   );
 }

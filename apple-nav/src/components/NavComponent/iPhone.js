@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 export default function IPhone() {
   return (
     <div>
-      <Link to="/iphonesubnav">iPhone</Link>
+      <Link to="/iphonesubnav" style={{ color: "#FFF" }}>
+        iPhone
+      </Link>
     </div>
   );
 }

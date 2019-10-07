@@ -6,7 +6,7 @@ export default function ShoppingBag() {
   return (
     <div>
       <Link to="/">
-        <i className="fas fa-shopping-bag"></i>
+        <i className="fas fa-shopping-bag" style={{ color: "#FFF" }}></i>
       </Link>
     </div>
   );

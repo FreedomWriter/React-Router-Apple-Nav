@@ -8,7 +8,7 @@ export default function Logo() {
   return (
     <div>
       <Link to="/">
-        <i className="fab fa-apple icon-3x"></i>
+        <i className="fab fa-apple icon-3x" style={{ color: "#FFF" }}></i>
       </Link>
     </div>
   );

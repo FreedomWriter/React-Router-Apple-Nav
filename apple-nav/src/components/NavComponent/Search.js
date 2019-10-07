@@ -6,7 +6,7 @@ export default function Search() {
   return (
     <div>
       <Link to="/">
-        <i className="fas fa-search"></i>
+        <i className="fas fa-search" style={{ color: "#FFF" }}></i>
       </Link>
     </div>
   );
