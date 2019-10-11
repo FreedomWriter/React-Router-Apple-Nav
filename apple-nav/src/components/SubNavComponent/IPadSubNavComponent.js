@@ -27,7 +27,6 @@ const ImgSize = styled.div`
 `;
 
 export default function IPadSubNavComponents() {
-  console.log(AppleIcons.ipad.url);
   return (
     <Justify>
       {AppleIcons.ipad.map(item => (
