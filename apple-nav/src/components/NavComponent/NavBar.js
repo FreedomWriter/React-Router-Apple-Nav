@@ -13,9 +13,6 @@ import MacSubNavComponents from "../SubNavComponent/MacSubNavComponent";
 import IPadSubNavComponents from "../SubNavComponent/IPadSubNavComponent";
 import IPhoneSubNavComponents from "../SubNavComponent/IPhoneSubNavComponent";
 import MusicSubNavComponents from "../SubNavComponent/MusicSubNavComponent";
-// import SearchSubNavComponents from "../SubNavComponent/SearchSubNavComponent";
-// import ShoppingBagSubNavComponents from "../SubNavComponent/ShoppingBagSubNavComponent";
-// import SupportSubNavComponents from "../SubNavComponent/SupportSubNavComponent";
 import TVSubNavComponents from "../SubNavComponent/TVSubNavComponent";
 import WatchSubNavComponents from "../SubNavComponent/WatchSubNavComponent";
 import styled from "styled-components";
@@ -36,7 +33,6 @@ const Justify = styled.div`
   opacity: 20%;
 `;
 export default function NavBar(props) {
-  console.log("props from NavBar: " + props);
   return (
     <div>
       <Justify>
@@ -59,25 +55,6 @@ export default function NavBar(props) {
             );
           }}
         />
-        {/* <Mac /> */}
-        {/* <Route path="/ipad" render={() => <IPad />} />
-        <Route path="/iphone" render={() => <IPhone />} />
-        <Route path="/watch" render={() => <Watch />} />
-        <Route path="/tv" render={() => <TV />} />
-        <Route path="/music" render={() => <Music />} />
-        <Route path="/support" render={() => <Support />} />
-        <Route path="/search" render={() => <Search />} />
-        <Route path="/shoppingbag" render={() => <ShoppingBag />} /> */}
-        {/* <SearchBar />
-        <ShoppingBag /> */}
-        {/* <NavItem>
-          <NavLink href="#">Another Link</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink disabled href="#">
-            Disabled Link
-          </NavLink>
-        </NavItem> */}
       </Justify>
       <Route
         exact
