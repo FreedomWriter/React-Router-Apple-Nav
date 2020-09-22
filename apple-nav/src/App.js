@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./components/NavComponent/NavBar";
 
-function App(props) {
+function App() {
   return <NavBar />;
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
-import AppleIcons from "../../AppleIcons";
+import { useParams } from "react-router-dom";
+import data from "../../AppleIcons";
 import styled from "styled-components";
 
 const Justify = styled.div`
@@ -11,10 +12,9 @@ const Justify = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   font-size: 1rem;
-  //   background: whi;
-  padding: 0 5%;
   background: black;
-  color: white;
+  padding: 0 5%;
+  /* color: black; */
   overflow: auto;
 `;
 
@@ -23,14 +23,17 @@ const ImgSize = styled.div`
   height: 125px;
   width: 125px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-top;
+  align-self: center;
 `;
 
-export default function IPhoneSubNavComponents(props) {
+export default function SubMenu() {
+  const { category } = useParams();
+
   return (
     <Justify>
-      {AppleIcons.iphone.map(item => (
-        <div>
+      {data[category].map((item) => (
+        <div key={item.id}>
           <ImgSize>
             <img src={item.url} alt={item.name} />
           </ImgSize>
