@@ -1,19 +1,20 @@
 import React from "react";
-import AppleIcons from "../../AppleIcons";
+import { useParams } from "react-router-dom";
+import data from "../../AppleIcons";
 import styled from "styled-components";
 
 const Justify = styled.div`
   width: 100%;
   max-height: 600px;
-  margin: 1% auto;
+  margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
   font-size: 1rem;
-  /* background: black; */
+  background: black;
   padding: 0 5%;
-  color: black;
+  /* color: black; */
   overflow: auto;
 `;
 
@@ -26,11 +27,13 @@ const ImgSize = styled.div`
   align-self: center;
 `;
 
-export default function WatchSubNavComponents(props) {
+export default function SubMenu() {
+  const { category } = useParams();
+
   return (
     <Justify>
-      {AppleIcons.watch.map((item) => (
-        <div>
+      {data[category].map((item) => (
+        <div key={item.id}>
           <ImgSize>
             <img src={item.url} alt={item.name} />
           </ImgSize>

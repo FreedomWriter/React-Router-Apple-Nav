@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Justify = styled.div`
   width: 100%;
-  max-height: 600px
+  max-height: 600px;
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
@@ -27,16 +27,5 @@ const ImgSize = styled.div`
 `;
 
 export default function IPadSubNavComponents() {
-  return (
-    <Justify>
-      {AppleIcons.ipad.map(item => (
-        <div>
-          <ImgSize>
-            <img src={item.url} alt={item.name} />
-          </ImgSize>
-          <p>{item.name}</p>
-        </div>
-      ))}
-    </Justify>
-  );
+  return <Justify></Justify>;
 }

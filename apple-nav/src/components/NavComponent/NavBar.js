@@ -1,26 +1,16 @@
 import React from "react";
-import Mac from "../NavComponent/Mac";
-import IPad from "../NavComponent/iPad";
-import IPhone from "../NavComponent/iPhone";
-import Watch from "../NavComponent/Watch";
-import TV from "../NavComponent/TV";
-import Music from "../NavComponent/Music";
+import { Link } from "react-router-dom";
 import Support from "../NavComponent/Support";
 import Logo from "../NavComponent/Logo";
 import Search from "../NavComponent/Search";
 import ShoppingBag from "../NavComponent/ShoppingBag";
-import MacSubNavComponents from "../SubNavComponent/MacSubNavComponent";
-import IPadSubNavComponents from "../SubNavComponent/IPadSubNavComponent";
-import IPhoneSubNavComponents from "../SubNavComponent/IPhoneSubNavComponent";
-import MusicSubNavComponents from "../SubNavComponent/MusicSubNavComponent";
-import TVSubNavComponents from "../SubNavComponent/TVSubNavComponent";
-import WatchSubNavComponents from "../SubNavComponent/WatchSubNavComponent";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
+import SubMenu from "../SubNavComponent/SubMenu";
 
 const Justify = styled.div`
   width: 100%;
-  height: 150px
+  height: 150px;
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
@@ -29,63 +19,33 @@ const Justify = styled.div`
   font-size: 1.6rem;
   background: black;
   padding: 0 5%;
-  color: hotpink;
-  opacity: 20%;
+  opacity: 80%;
 `;
-export default function NavBar(props) {
+
+const StyledLink = styled(Link)`
+  color: white;
+`;
+export default function NavBar() {
   return (
     <div>
       <Justify>
-        <Route
-          path="/"
-          render={() => {
-            return (
-              <Justify>
-                <Logo />
-                <Route path="/" render={props => <Mac {...props} />} />
-                <Route path="/" render={props => <IPad {...props} />} />
-                <Route path="/" render={props => <IPhone {...props} />} />
-                <Route path="/" render={props => <Watch {...props} />} />
-                <Route path="/" render={props => <TV {...props} />} />
-                <Route path="/" render={props => <Music {...props} />} />
-                <Route path="/" render={props => <Support {...props} />} />
-                <Route path="/" render={props => <Search {...props} />} />
-                <Route path="/" render={props => <ShoppingBag {...props} />} />
-              </Justify>
-            );
-          }}
-        />
+        <Justify>
+          <Logo />
+          <StyledLink to="/mac">Mac</StyledLink>
+          <StyledLink to="/ipad">iPad</StyledLink>
+          <StyledLink to="/iphone">iPhone</StyledLink>
+          <StyledLink to="/watch">Watch</StyledLink>
+          <StyledLink to="/tv">TV</StyledLink>
+          <StyledLink to="/music">Music</StyledLink>
+          <Route path="/" render={(props) => <Support {...props} />} />
+          <Route path="/" render={(props) => <Search {...props} />} />
+          <Route path="/" render={(props) => <ShoppingBag {...props} />} />
+        </Justify>
       </Justify>
-      <Route
-        exact
-        path="/macsubnav"
-        render={props => <MacSubNavComponents {...props} />}
-      />
-      <Route
-        exact
-        path="/ipadsubnav"
-        render={props => <IPadSubNavComponents {...props} />}
-      />
-      <Route
-        exact
-        path="/iphonesubnav"
-        render={props => <IPhoneSubNavComponents {...props} />}
-      />
-      <Route
-        exact
-        path="/watchsubnav"
-        render={props => <WatchSubNavComponents {...props} />}
-      />
-      <Route
-        exact
-        path="/tvsubnav"
-        render={props => <TVSubNavComponents {...props} />}
-      />
-      <Route
-        exact
-        path="/musicsubnav"
-        render={props => <MusicSubNavComponents {...props} />}
-      />
+
+      <Route path="/:category">
+        <SubMenu />
+      </Route>
     </div>
   );
 }
