@@ -9,17 +9,17 @@ const Justify = styled.div`
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-end;
   font-size: 1rem;
   background: black;
   padding: 0 5%;
-  /* color: black; */
+  color: white;
   overflow: auto;
 `;
 
 const ImgSize = styled.div`
-  margin: 10% auto;
+  margin: 0 auto;
   height: 125px;
   width: 125px;
   display: flex;
